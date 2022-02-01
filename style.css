@@ -9,6 +9,74 @@
 
 body {
 	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
 	font-family: "Lato", "sans-serif";
+}
+p {
+	height: fit-content;
+	width: fit-content;
+}
+
+.search-flex-container {
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.temp-flex-container {
+	height: 100vh;
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.right-container {
+	display: grid;
+	grid: "high clouds" "low feels-like";
+}
+.loc-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: flex-end;
+}
+
+#icon {
+	height: 96px;
+	width: 96px;
+}
+#location {
+	font-size: 1.5rem;
+}
+
+#current-temp {
+	font-size: 5rem;
+}
+
+#high {
+	grid-area: high;
+	font-size: 1.5rem;
+}
+#low {
+	grid-area: low;
+	font-size: 1.5rem;
+}
+#clouds {
+	grid-area: clouds;
+	font-size: 1.5rem;
+}
+#feels-like {
+	grid-area: feels-like;
+	font-size: 1.5rem;
 }
