@@ -8,20 +8,124 @@
 }
 
 body {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: calc(100vh - 20px);
 	overflow: hidden;
 	font-family: "Lato", "sans-serif";
+	background-image: url("./assets/back-ground.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
-p {
+
+nav {
+	padding: 10px;
+	float: right;
+}
+
+.flext-container p {
 	height: fit-content;
 	width: fit-content;
 }
 
-.search-flex-container {
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 15%;
+	height: 20px;
+	color: white;
+}
+
+footer a {
+	text-decoration: none;
+	color: violet;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #de640c;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+#sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
 	height: 100vh;
+	background-color: aliceblue;
+}
+
+#sidebar-interact {
+	align-self: flex-end;
+}
+
+#sidebar-content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	align-self: center;
+}
+
+#sidebar-content label {
+	margin: 20px;
+	align-self: center;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-flex-container {
+	height: calc(100vh - 20px);
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -29,8 +133,8 @@ p {
 }
 
 .temp-flex-container {
-	height: 100vh;
-	width: 75%;
+	height: calc(100vh - 20px);
+	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -43,7 +147,8 @@ p {
 
 .right-container {
 	display: grid;
-	grid: "high clouds" "low feels-like";
+	grid-gap: 0.25rem;
+	grid: "description description" "high feels-like" "low feels-like";
 }
 .loc-container {
 	display: flex;
@@ -56,6 +161,14 @@ p {
 	height: 96px;
 	width: 96px;
 }
+
+#description {
+	grid-area: description;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
 #location {
 	font-size: 1.5rem;
 }
@@ -72,11 +185,9 @@ p {
 	grid-area: low;
 	font-size: 1.5rem;
 }
-#clouds {
-	grid-area: clouds;
-	font-size: 1.5rem;
-}
+
 #feels-like {
 	grid-area: feels-like;
-	font-size: 1.5rem;
+	font-size: 4rem;
+	height: 100%;
 }
