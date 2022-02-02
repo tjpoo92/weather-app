@@ -8,34 +8,68 @@
 		<title>Weather App</title>
 		<link rel="shortcut icon" href="#" type="image/x-icon" />
 	</head>
+
 	<body>
-		<div class="search-flex-container">
-			<h1>It's the weather yo</h1>
-			<form>
-				<input type="text" required />
-				<button type="button">Submit</button>
-			</form>
-		</div>
-		<div class="temp-flex-container">
-			<div class="left-container">
-				<p
-					id="icon"
-					style="
-						background-image: url(http://openweathermap.org/img/wn/10d@2x.png);
-					"
-				></p>
-				<p id="current-temp">50&#176;</p>
-				<div class="loc-container">
-					<p id="location">Highlands</p>
+		<nav id="sidebar">
+			<div id="sidebar-interact">i</div>
+			<div id="sidebar-content">
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider"></span>
+				</label>
+				<div>Fahrenheit or Celcius</div>
+			</div>
+		</nav>
+		<div class="flex-container">
+			<div class="search-flex-container">
+				<h1>It's the weather yo</h1>
+				<form>
+					<input type="text" required />
+					<button type="button">Submit</button>
+				</form>
+			</div>
+			<div class="temp-flex-container">
+				<div class="left-container">
+					<p
+						id="icon"
+						style="
+							background-image: url(http://openweathermap.org/img/wn/10n@2x.png);
+						"
+					></p>
+					<p id="current-temp">50&#176;</p>
+					<div class="loc-container">
+						<p id="location">Highlands</p>
+					</div>
+				</div>
+				<div class="right-container">
+					<p id="description">Cloudy</p>
+					<p id="high">60&#176;</p>
+					<p id="low">38&#176;</p>
+					<p id="feels-like">49&#176;</p>
 				</div>
 			</div>
-			<div class="right-container">
-				<p id="high">H 60&#176;</p>
-				<p id="low">L 38&#176;</p>
-				<p id="clouds">Clouds 100%</p>
-				<p id="feels-like">FL 49&#176;</p>
-			</div>
 		</div>
+		<footer>
+			<p>
+				Photo by
+				<a
+					href="https://unsplash.com/@moino007?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+					>DDP</a
+				>
+				on
+				<a
+					href="https://unsplash.com/backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+					>Unsplash</a
+				>
+				| This project was completed as part of
+				<a href="https://www.theodinproject.com/" target="_blank"
+					>The Odin Project</a
+				>
+				you can see more of my work on
+				<a href="https://github.com/tjpoo92/" target="_blank">GitHub</a> using
+				the <a href="https://openweathermap.org/">OpenWeatherApi</a>
+			</p>
+		</footer>
 		<script type="module" src="main.js"></script>
 	</body>
 </html>
