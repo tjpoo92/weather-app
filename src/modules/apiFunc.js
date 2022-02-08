@@ -21,6 +21,7 @@ async function success(position) {
 	const foundLocationText = resolve.name;
 	const iconValue = resolve.weather[0].icon;
 	renderTemp(convToF(temperatureArray), foundLocationText, iconValue);
+	convToC(temperatureArray);
 }
 function error() {
 	console.warn("Error from browser provided location");

@@ -3,7 +3,7 @@ import { temperatureArray } from "./apiFunc";
 // T(°F) = 300K × 9/5 - 459.67 = 80.33 °F
 function convToF(kelvin) {
 	const faherenheitArray = kelvin.map((num) => {
-		return (num * 5) / 9 - 459.67;
+		return (num * 9) / 5 - 459.67;
 	});
 	return faherenheitArray;
 }
