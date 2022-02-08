@@ -8,7 +8,7 @@
 }
 
 body {
-	height: calc(100vh - 20px);
+	height: 100vh;
 	overflow: hidden;
 	font-family: "Lato", "sans-serif";
 	background-image: url("./assets/back-ground.jpg");
@@ -17,105 +17,25 @@ body {
 	background-attachment: fixed;
 }
 
-nav {
-	padding: 10px;
-	float: right;
-}
-
-.flext-container p {
-	height: fit-content;
-	width: fit-content;
-}
-
 footer {
 	position: fixed;
 	bottom: 0;
-	right: 15%;
+	right: 1%;
 	height: 20px;
-	color: white;
+	color: #808080;
 }
 
 footer a {
 	text-decoration: none;
-	color: violet;
+	color: #a6a6a6;
 }
 
-/* The switch - the box around the slider */
-.switch {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-/* The slider */
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #de640c;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
-
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
-}
-
-input:checked + .slider {
-	background-color: #2196f3;
-}
-
-input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
-}
-
-#sidebar {
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-	height: 100vh;
-	background-color: aliceblue;
-}
-
-#sidebar-interact {
-	align-self: flex-end;
-}
-
-#sidebar-content {
-	display: flex;
-	flex-direction: column;
-	margin-top: 2rem;
-	align-self: center;
-}
-
-#sidebar-content label {
-	margin: 20px;
-	align-self: center;
+p.help-text {
+	padding-top: 0.5rem;
+	width: 100% !important;
+	overflow: visible;
+	text-align: center;
+	display: none;
 }
 
 .flex-container {
@@ -124,20 +44,27 @@ input:checked + .slider:before {
 	justify-content: center;
 }
 
+.flex-container p {
+	height: fit-content;
+	width: fit-content;
+}
+
 .search-flex-container {
-	height: calc(100vh - 20px);
-	display: none;
+	height: 100vh;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	color: #333;
 }
 
 .temp-flex-container {
-	height: calc(100vh - 20px);
+	height: 100vh;
 	width: 50%;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: space-between;
+	color: #333;
 }
 
 .left-container {
@@ -148,7 +75,7 @@ input:checked + .slider:before {
 .right-container {
 	display: grid;
 	grid-gap: 0.25rem;
-	grid: "description description" "high feels-like" "low feels-like";
+	grid: "description description" "high feels-like" "low feels-like" "feels-like-text feels-like-text";
 }
 .loc-container {
 	display: flex;
@@ -171,10 +98,12 @@ input:checked + .slider:before {
 
 #location {
 	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 #current-temp {
 	font-size: 5rem;
+	cursor: pointer;
 }
 
 #high {
@@ -190,4 +119,34 @@ input:checked + .slider:before {
 	grid-area: feels-like;
 	font-size: 4rem;
 	height: 100%;
+	cursor: pointer;
+}
+
+#feels-like-text {
+	grid-area: feels-like-text;
+	width: 100%;
+	text-align: center;
+}
+
+/* Style the search field */
+input {
+	padding: 10px;
+	border: #333 solid 2px;
+	border-radius: 8px;
+	width: 80%;
+	background: transparent;
+}
+
+input:focus-visible {
+	outline: none;
+}
+
+/* Style the submit button */
+form button {
+	width: 20%;
+	padding: 10px;
+	background: transparent;
+	color: #333;
+	border: none;
+	cursor: pointer;
 }
