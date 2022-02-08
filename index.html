@@ -7,26 +7,33 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>Weather App</title>
 		<link rel="shortcut icon" href="#" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+			integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+			crossorigin="anonymous"
+		/>
 	</head>
 
 	<body>
-		<nav id="sidebar">
-			<div id="sidebar-interact">i</div>
-			<div id="sidebar-content">
-				<label class="switch">
-					<input type="checkbox" />
-					<span class="slider"></span>
-				</label>
-				<div>Fahrenheit or Celcius</div>
-			</div>
-		</nav>
 		<div class="flex-container">
 			<div class="search-flex-container">
-				<h1>It's the weather yo</h1>
-				<form>
-					<input type="text" required />
-					<button type="button">Submit</button>
+				<form class="flex-container">
+					<input
+						type="text"
+						placeholder="Search..."
+						name="search"
+						required
+						autofocus
+					/>
+					<button type="button">
+						<i class="fas fa-search-location fa-lg"></i>
+					</button>
 				</form>
+				<p class="help-text">
+					Location not found <br />Seach must be in the form blah blah blah blah
+					adfasdfasdfasdfasdf
+				</p>
 			</div>
 			<div class="temp-flex-container">
 				<div class="left-container">
@@ -38,7 +45,9 @@
 					></p>
 					<p id="current-temp">50&#176;</p>
 					<div class="loc-container">
-						<p id="location">Highlands</p>
+						<p id="location">
+							<i class="fas fa-search-location"></i> Highlands
+						</p>
 					</div>
 				</div>
 				<div class="right-container">
@@ -46,6 +55,7 @@
 					<p id="high">60&#176;</p>
 					<p id="low">38&#176;</p>
 					<p id="feels-like">49&#176;</p>
+					<p id="feels-like-text">Feels Like</p>
 				</div>
 			</div>
 		</div>
@@ -61,13 +71,13 @@
 					href="https://unsplash.com/backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 					>Unsplash</a
 				>
-				| This project was completed as part of
+				| This project was completed using the
+				<a href="https://openweathermap.org/">OpenWeatherMap API</a> as part of
 				<a href="https://www.theodinproject.com/" target="_blank"
 					>The Odin Project</a
 				>
 				you can see more of my work on
-				<a href="https://github.com/tjpoo92/" target="_blank">GitHub</a> using
-				the <a href="https://openweathermap.org/">OpenWeatherApi</a>
+				<a href="https://github.com/tjpoo92/" target="_blank">GitHub</a>
 			</p>
 		</footer>
 		<script type="module" src="main.js"></script>
