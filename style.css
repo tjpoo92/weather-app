@@ -37,7 +37,7 @@ p.help-text {
 	width: 100% !important;
 	overflow: visible;
 	text-align: center;
-	display: none;
+	display: inline;
 }
 
 .flex-container {
@@ -53,7 +53,7 @@ p.help-text {
 
 .search-flex-container {
 	height: 100vh;
-	display: none;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
@@ -63,7 +63,7 @@ p.help-text {
 .temp-flex-container {
 	height: 100vh;
 	width: 50%;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: space-between;
 	color: #333;
@@ -163,7 +163,7 @@ input:focus-visible {
 }
 
 /* Style the submit button */
-form button {
+div.flex-container button {
 	width: 20%;
 	padding: 10px;
 	background: transparent;
