@@ -21,5 +21,8 @@
 		"url": "https://github.com/tjpoo92/weather-app/issues"
 	},
 	"homepage": "https://github.com/tjpoo92/weather-app#readme",
-	"description": ""
+	"description": "",
+	"dependencies": {
+		"sweetalert": "^2.1.2"
+	}
 }

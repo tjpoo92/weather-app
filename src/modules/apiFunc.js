@@ -2,7 +2,6 @@ import { convToC, convToF } from "./conversion";
 import { renderTemp } from "./render";
 
 //API call using browser provided location (async/await)
-navigator.geolocation.getCurrentPosition(success, error);
 
 async function success(position) {
 	const latitude = position.coords.latitude;
@@ -19,9 +18,16 @@ async function success(position) {
 		resolve.main.temp_min,
 	];
 	const foundLocationText = resolve.name;
+	const weatherDescription = resolve.weather[0].main;
 	const iconValue = resolve.weather[0].icon;
-	renderTemp(convToF(temperatureArray), foundLocationText, iconValue);
-	convToC(temperatureArray);
+
+	renderTemp(
+		convToF(temperatureArray),
+		convToC(temperatureArray),
+		foundLocationText,
+		weatherDescription,
+		iconValue
+	);
 }
 function error() {
 	console.warn("Error from browser provided location");
@@ -44,9 +50,16 @@ function getWeatherData(userText) {
 				response.main.temp_min,
 			];
 			const foundLocationText = response.name;
+			const weatherDescription = response.weather[0].main;
 			const iconValue = response.weather[0].icon;
-			renderTemp(convToF(temperatureArray), foundLocationText, iconValue);
+			renderTemp(
+				convToF(temperatureArray),
+				convToC(temperatureArray),
+				foundLocationText,
+				weatherDescription,
+				iconValue
+			);
 		});
 }
 
-export { getWeatherData };
+export { getWeatherData, success, error };
