@@ -1,3 +1,6 @@
+import { helpText } from "./apiFunc";
+import { text } from "..";
+
 const tempContainer = document.querySelector(".temp-flex-container");
 const searchContainer = document.querySelector(".search-flex-container");
 const currentTemp = document.querySelector("#current-temp");
@@ -39,6 +42,8 @@ function renderTemp(
 function renderSearch() {
 	tempContainer.style.display = "none";
 	searchContainer.style.display = "flex";
+	helpText.style.display = "none";
+	text.value = "";
 }
 
 function renderfahrenheit(fahrenheitArray) {

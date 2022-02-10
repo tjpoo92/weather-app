@@ -1,8 +1,9 @@
 import { convToC, convToF } from "./conversion";
 import { renderTemp } from "./render";
 
-//API call using browser provided location (async/await)
+const helpText = document.querySelector(".help-text");
 
+//API call using browser provided location (async/await)
 async function success(position) {
 	const latitude = position.coords.latitude;
 	const longitude = position.coords.longitude;
@@ -36,11 +37,15 @@ function error() {
 //API call using user entered location (promises)
 function getWeatherData(userText) {
 	fetch(
-		`https://api.openweathermap.org/data/2.5/weather?q=${userText.value}&appid=ca4997f7b83bdf4f56c268b78eab82da`,
+		`https://api.openweathermap.org/data/2.5/weather?q=${userText}&appid=ca4997f7b83bdf4f56c268b78eab82da`,
 		{ mode: "cors" }
 	)
 		.then(function (response) {
-			return response.json();
+			if (response.status >= 200 && response.status <= 299) {
+				return response.json();
+			} else {
+				throw response.statusText;
+			}
 		})
 		.then(function (response) {
 			const temperatureArray = [
@@ -59,7 +64,12 @@ function getWeatherData(userText) {
 				weatherDescription,
 				iconValue
 			);
+		})
+		.catch((error) => {
+			console.error(error);
+			helpText.innerHTML = `Location not found <br /> Try including your country code to achieve better results`;
+			helpText.style.display = "inline";
 		});
 }
 
-export { getWeatherData, success, error };
+export { getWeatherData, success, error, helpText };
