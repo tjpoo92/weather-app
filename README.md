@@ -1,17 +1,28 @@
-# Weather App
+<div align="center">
+  <h1>☀️Weather Application⛈️</h1>
+  <a href="https://tjpoo92.github.io/weather-app/">View Application</a>
+</div>
 
-## Obejctive:
+## About the project:
 
-To create a weather app using the OpenWeatherMap API utilizing fetch, promises and async/await.
+### ✅ Objective:
+The goal of this project was to create a weather app using the OpenWeather API utilizing JavaScript fetch, promises and async/await.
 
-The main goals were to:
+### 💻 Technology Used:
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VSCODE" alt="VSCODE" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" title="webpack" alt="webpack" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" **alt="Git" width="40" height="40"/>
+</div>
 
-- Access an API
-  - Using fetch
-  - Promises
-  - Async/await
-- Process API information and present it on page
 
-## Overview
+### Retrospective
 
-This was the most enjoyable project I've worked on for awhile. I was able to focus on the project due to less going on at home and I feel like the objectives were more focused than other projects. I also was more focused in my approach in creating the design of my site which I believe is the best I've done thus far.
+This project was extremely enjoyable to work on. I enjoy doing and working on API calls and it was fun learning how to handle the incoming data and structure it in a way that worked for the way I wanted to present the data. I also found the user interface of this project easier to do than other projects I've worked on since the elements of it were primarily informational instead of being functional.
+
+#### Things to improve upon:
+- Search functionality is limited and doesn't handle errors other than to tell the user to include their country code
+- Coverting temperature can occasionally stop working
